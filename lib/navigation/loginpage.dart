@@ -8,8 +8,6 @@ class Loginpage extends StatefulWidget {
 }
 
 class _LoginpageState extends State<Loginpage> {
-  @override
-  Widget build(BuildContext context) {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -18,6 +16,10 @@ class _LoginpageState extends State<Loginpage> {
     // TODO: implement initState
     super.initState();
   }
+
+  @override
+  Widget build(BuildContext context) {
+
 
     return const Placeholder();
   }
