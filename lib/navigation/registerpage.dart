@@ -64,6 +64,7 @@ class _RegisterpageState extends State<Registerpage> {
               ),
               TextButton(
                 onPressed: () {
+                  // tambah halaman baru ke atas stack navigator (A -> B stack)
                   Navigator.pushNamed(context, '/login');
                 },
                 child: Text('Sudah punya akun? Login Sekarang!'),
