@@ -1,4 +1,4 @@
-![Screenshot_1745384886](https://github.com/user-attachments/assets/dec3f7f9-8c26-49f2-bbb7-ac218d808572)# navigation_routing_parsing
+# navigation_routing_parsing
 
 A new Flutter project.
 
