@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_routing_parsing/navigation/homepage.dart';
+import 'package:navigation_routing_parsing/navigation/registerpage.dart';
 
 class Loginpage extends StatefulWidget {
   const Loginpage({super.key});
@@ -48,6 +50,26 @@ class _LoginpageState extends State<Loginpage> {
                   }
                   return null;
                 },
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Homepage()),
+                    );
+                  }
+                },
+                child: Text('Login'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Registerpage()),
+                  );
+                },
+                child: Text('Belum punya akun ? Daftar Sekarang !'),
               ),
             ],
           ),
