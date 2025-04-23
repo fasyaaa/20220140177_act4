@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_routing_parsing/navigation/loginpage.dart';
 
 class Registerpage extends StatefulWidget {
   const Registerpage({super.key});
@@ -17,7 +18,7 @@ class _RegisterpageState extends State<Registerpage> {
     super.initState();
   }
 
-    @override
+  @override
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
     return Scaffold(
@@ -49,6 +50,23 @@ class _RegisterpageState extends State<Registerpage> {
                   }
                   return null;
                 },
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Loginpage()),
+                    );
+                  }
+                },
+                child: Text('Register'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                child: Text('Sudah punya akun? Login Sekarang!'),
               ),
             ],
           ),
