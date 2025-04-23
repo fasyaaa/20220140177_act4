@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_routing_parsing/navigation/homepage.dart';
 
 class DetaiOrderPage extends StatelessWidget {
   final String makanan;
@@ -31,6 +32,16 @@ class DetaiOrderPage extends StatelessWidget {
             Text('Total Price : $totalHarga'),
 
             const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => Homepage()),
+                  (route) => false,
+                );
+              },
+              child: Text('Finish Order')
+            ),
           ],
         ),
       ),
